@@ -1,0 +1,70 @@
+
+.sidebar-with-line {
+  border-right: 2px solid #ccc;
+}
+
+.menu-icon-container {
+  width: 32px;
+  height: 32px;
+  background: linear-gradient(#f79e80,#e58565);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 8px;
+
+}
+
+@media (max-width: 991.98px) {
+  .sidebar {
+    position: fixed;
+    background-color: #fff;
+    z-index: 103;
+    width: 100%;
+    max-width: 320px;
+    min-width: 320px;
+    transform: translateX(-320px);
+    transition: filter .2s ease-in,transform .2s ease-in-out;
+  }
+}
+
+.sidebar {
+  color: #444;
+  transition: all .3s;
+  width: 19rem;
+  font-size: 16px;
+  min-width: 19rem;
+  max-width: 19rem;
+  height: calc(100vh - 65px);
+  overflow-y: auto;
+  scrollbar-color: #c4c4c4 #eee;
+  scrollbar-width: thin;
+  text-decoration: none;
+  box-shadow: 2px 0 2px 0 rgba(0,0,0,.06);
+}
+
+.main-gradient {
+  background: linear-gradient(180deg,#fbfbfb 0,#e4e4e4 49%,#dfdfdf 51%,#f6f6f6);
+}
+
+.link-header {
+  border: 1px solid #c2c2c2;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px; /* Adjust padding as needed */
+  font-size: 10rem; /* Adjust font size as needed */
+}
+
+.rounded {
+  border-radius: .33rem !important;
+}
+
+.e3-side-items li {
+  background: #fbfbfb;
+  margin-bottom: 8px;
+}

@@ -1,0 +1,16 @@
+/* Add this to your CSS or use inline styles */
+
+.sidebar-container {
+  display: flex;
+}
+
+.event-calendar-header {
+  flex-grow: 1;
+  padding: 20px;
+  border-right: 2px solid #ccc;
+}
+
+/* Event-Calendar.css */
+.type-menu {
+  list-style: none;
+}

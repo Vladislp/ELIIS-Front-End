@@ -1,0 +1,12 @@
+/* App.css */
+.sidebar {
+    width: 200px;
+    background-color: #fff;
+  }
+  
+  .content {
+    display: flex;
+    background-color: #fbfbfb;
+    min-height: calc(100vh - 65px);
+  }
+  
