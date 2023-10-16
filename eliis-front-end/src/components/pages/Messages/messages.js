@@ -11,8 +11,9 @@ import {
   MDBTextArea,
   MDBCardHeader,
 } from "mdb-react-ui-kit";
+import './messages.css';
 
-export default function Messages() {
+export default function App() {
   return (
     <MDBContainer fluid className="py-5 gradient-custom">
       <MDBRow>

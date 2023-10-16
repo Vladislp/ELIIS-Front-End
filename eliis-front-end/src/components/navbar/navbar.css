@@ -1,3 +1,33 @@
 .navbar-with-line {
     border-bottom: 2px solid #ccc;
 }
+
+@media (min-width: 768px) {
+    .md\:gap-4 {
+      gap: 1rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .md\:grid-cols-\[2fr_1px_1fr\] {
+      grid-template-columns: 2fr 1px 1fr;
+    }
+
+}
+
+.items-center {
+    align-items: center;
+}
+
+.place-items-end {
+    place-items: end;
+    align-items: end;
+}
+
+.grid-rows-1 {
+  grid-template-rows: repeat(1, minmax(0, 1fr));
+}
+
+.max-w-\[120px\] {
+    max-width: 120px;
+  }

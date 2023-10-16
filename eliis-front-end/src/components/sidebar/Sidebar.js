@@ -17,20 +17,19 @@ import { mdiTextBoxCheck } from '@mdi/js';
 import { mdiLifebuoy } from '@mdi/js';
 import './Sidebar.css';
 
-
 const Sidebar = () => {
   return (
-    <div className='sidebar sidebar-with-line'>
+    <div className='sidebar sidebar-with-line gap-2'>
       <nav>
-        <ul className="list-unstyled components px-3 pt-3">
+        <ul className="p-4 type-menu">
           {menuItems.map((item, index) => (
             <li key={index}>
               <NavLink to={item.to} className="nav-link">
-                <div className="main-gradient link-header rounded">
-                  <div className="menu-icon-container">
+                <div className="border rounded-lg font-semibold py-2 px-1 text-sm main-gradient">
+                  <div className="menu-icon-container text-white rounded-md">
                     <Icon path={item.icon} size={1} />
                   </div>
-                  <span className="flex-shrink-1 text e3-light-text-shadow e3-font-500">{item.label}</span>
+                  <span>{item.label}</span>
                 </div>
               </NavLink>
             </li>
@@ -41,14 +40,37 @@ const Sidebar = () => {
   );
 };
 
-
 const menuItems = [
-  { to: '/dashboard', icon: mdiViewDashboard, label: 'Dashboard' },
-  { to: '/diary', icon: mdiBookOpenVariant, label: 'Diary' },
-  { to: '/plans', icon: mdiCalendarCheck, label: 'Plans' },
-  { to: '/messages', icon: mdiMessageTextOutline, label: 'Messages' },
-  { to: '/announcements', icon: mdiBullhornOutline, label: 'Announcements' },
-  { to: '/workschedule', icon: mdiClockOutline, label: 'Work schedule' },
+  { 
+    to: '/dashboard', 
+    icon: mdiViewDashboard, 
+    label: 'Dashboard' 
+  },
+  { 
+    to: '/diary', 
+    icon: mdiBookOpenVariant, 
+    label: 'Diary' 
+  },
+  { 
+    to: '/plans', 
+    icon: mdiCalendarCheck, 
+    label: 'Plans' 
+  },
+  { 
+    to: '/messages', 
+    icon: mdiMessageTextOutline, 
+    label: 'Messages' 
+  },
+  { 
+    to: '/announcements', 
+    icon: mdiBullhornOutline, 
+    label: 'Announcements' 
+  },
+  { 
+    to: '/workschedule', 
+    icon: mdiClockOutline, 
+    label: 'Work schedule' 
+  },
   { to: '/events', icon: mdiCalendarOutline, label: 'Events' },
   { to: '/gallery', icon: mdiFolderMultipleImage, label: 'Gallery' },
   { to: '/documents', icon: mdiCloud, label: 'Documents' },
