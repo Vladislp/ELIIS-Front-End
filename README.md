@@ -15,7 +15,7 @@
     <br />
     <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
+    <a href="https://github.com/Vladislp/ELIIS-Front-End/issues/new?assignees=&labels=&projects=&template=bug_report.md&title=">Report Bug</a>
     ·
     <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
   </p>
