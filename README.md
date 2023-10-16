@@ -2,11 +2,9 @@
 
 <!-- PROJECT LOGO -->
 <br />
-<div align="center">
-  <a href="[https://github.com/othneildrew/Best-README-Template](https://github.com/Vladislp)">
-  </a>
 
-![image](https://github.com/Vladislp/ELIIS-Front-End/assets/42935979/b73f2f99-6122-4575-8cfe-2006e8411a08)
+![image](https://github.com/Vladislp/ELIIS-Front-End/assets/42935979/bdab3ab0-399d-40ac-8c22-ccf8a3796303)
+
 
   <h3 align="center">ELIIS calendar</h3>
 
