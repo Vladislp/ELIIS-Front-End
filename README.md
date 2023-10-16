@@ -6,7 +6,8 @@
   <a href="[https://github.com/othneildrew/Best-README-Template](https://github.com/Vladislp)">
   </a>
 
-![image](https://github.com/Vladislp/ELIIS-Front-End/assets/42935979/c05423ba-b92a-413e-8aca-c92a773e76d9)
+![image](https://github.com/Vladislp/ELIIS-Front-End/assets/42935979/b73f2f99-6122-4575-8cfe-2006e8411a08)
+
   <h3 align="center">ELIIS calendar</h3>
 
   <p align="center">
@@ -90,10 +91,9 @@ Follow these steps to set up ELIIS Calendar on your local machine:
 
 Make sure you have Node.js and npm installed on your system.
 
-### Installation
+## Installation
 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
-
+### Front-End
 1. Clone the repo
    ```sh
    git clone https://github.com/Vladislp/ELIIS-Front-End.git
@@ -110,7 +110,19 @@ _Below is an example of how you can instruct your audience on installing and set
    ```js
    npm start
    ```
-
+### Back-End
+1. Navigate to server folder
+   ```js
+   cd /eliis-front-end/server
+   ```
+2. Start the application:
+   ```js
+   npm start
+   ```
+NB! Might need to do:
+   ```js
+   npm install
+   ```
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
