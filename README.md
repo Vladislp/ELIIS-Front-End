@@ -22,6 +22,7 @@
 </div>
 
 
+![logo](https://github.com/Vladislp/ELIIS-Front-End/assets/42935979/793ccd06-d028-4f6b-917d-6bd3250c859d)
 
 <!-- TABLE OF CONTENTS -->
 <details>
@@ -49,12 +50,10 @@
   </ol>
 </details>
 
-
-
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+
 
 ELIIS Calendar is a feature-rich calendar application designed to streamline your scheduling and event management needs. Whether you're an individual managing personal events or a team coordinating professional schedules, ELIIS Calendar provides a user-friendly and customizable platform.
 
