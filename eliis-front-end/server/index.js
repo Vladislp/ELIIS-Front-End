@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const fs = require('fs/promises'); // Using fs.promises for async/await
+const rateLimit = require('express-rate-limit');
 
 const app = express();
 const port = process.env.PORT || 3001;
@@ -12,6 +13,15 @@ app.use(bodyParser.json());
 
 // Enable CORS for all routes
 app.use(cors());
+
+// Define a rate limiter (adjust options as needed)
+const limiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 100, // limit each IP to 100 requests per windowMs
+});
+
+// Apply the rate limiter to all routes starting with '/add'
+app.use('/add', limiter);
 
 // Define a route to add an event
 app.post('/addEvent', async (req, res) => {
