@@ -4,7 +4,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Logo from '../Logo/logo';
 import NavItems from './navbarItems';
-import Personal from './personal';
+import Personal from './Profile/personal';
 
 const Navigation = () => {
   return (

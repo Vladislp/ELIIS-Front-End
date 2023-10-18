@@ -1,0 +1,39 @@
+/* Style of checkmark component */
+.e3-img-overlay {
+    position: absolute;
+    right: 0.4rem;
+    bottom: 0.1rem;
+    line-height: 12px;
+}
+/* Style for chevron and circle */
+.e3-white-fill-icon {
+    background: #fff;
+    border: .1rem solid #f79e80;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+}
+/* Background style for profile circle */
+.military-color {
+    background-color: rgb(166, 194, 100);
+    -webkit-text-fill-color: white;
+}
+/* For text beside profile logo */
+.font-semibold {
+    font-weight: 600;
+    border-left: 1px solid #ccc;
+}
+/* For text style */
+.text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+/* Should be for color of the second row */
+.text-secondary {
+    background-color: rgb(166, 194, 100);
+}
+/* Styling for company name */
+.text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}
