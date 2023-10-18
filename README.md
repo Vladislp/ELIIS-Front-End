@@ -3,8 +3,7 @@
 <!-- PROJECT LOGO -->
 <br />
 
-![image](https://github.com/Vladislp/ELIIS-Front-End/assets/42935979/bdab3ab0-399d-40ac-8c22-ccf8a3796303)
-
+![image](https://github.com/Vladislp/ELIIS-Front-End/assets/42935979/cde4a932-602b-4c2b-adac-f32e0781e21e)
 
   <h3 align="center">ELIIS calendar</h3>
 
