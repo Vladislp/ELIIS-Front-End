@@ -5,18 +5,18 @@
 
 ![image](https://github.com/Vladislp/ELIIS-Front-End/assets/42935979/cde4a932-602b-4c2b-adac-f32e0781e21e)
 
-  <h3 align="center">ELIIS calendar</h3>
+  <h3 align="center">ELIIS calendar📅</h3>
 
   <p align="center">
     <br />
-    <a href="https://github.com/Vladislp/ELIIS-Front-End/wiki"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/Vladislp/ELIIS-Front-End/wiki"><strong>Explore the docs📚»</strong></a>
     <br />
     <br />
-    <a href="">View Demo</a>
+    <a href="">View Demo:star:</a>
     ·
-    <a href="https://github.com/Vladislp/ELIIS-Front-End/issues/new?assignees=&labels=&projects=&template=bug_report.md&title=">Report Bug</a>
+    <a href="https://github.com/Vladislp/ELIIS-Front-End/issues/new?assignees=&labels=&projects=&template=bug_report.md&title=">Report Bug:beetle:</a>
     ·
-    <a href="https://github.com/Vladislp/ELIIS-Front-End/issues/new?assignees=&labels=&projects=&template=feature_request.md&title=">Request Feature</a>
+    <a href="https://github.com/Vladislp/ELIIS-Front-End/issues/new?assignees=&labels=&projects=&template=feature_request.md&title=">Request Feature🚀</a>
   </p>
 </div>
 
@@ -28,24 +28,23 @@
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="#about-the-project">About The Project</a>
+      <a href="#about-the-project">About The Project📖</a>
       <ul>
-        <li><a href="#built-with">Built With</a></li>
+        <li><a href="#built-with">Built With🛠️</a></li>
       </ul>
     </li>
     <li>
-      <a href="#getting-started">Getting Started</a>
+      <a href="#getting-started">Getting Started🚀</a>
       <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
+        <li><a href="#prerequisites">Prerequisites⚙️</a></li>
+        <li><a href="#installation">Installation📥</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
+    <li><a href="#usage">Usage🎮</a></li>
+    <li><a href="#roadmap">Roadmap🗺️</a></li>
+    <li><a href="#contributing">Contributing🤝</a></li>
+    <li><a href="#license">License📄</a></li>
+    <li><a href="#contact">Contact📧</a></li>
   </ol>
 </details>
 
@@ -67,31 +66,30 @@ Responsive Design: Access your calendar seamlessly on various devices, from desk
 
 
 
-### Built With
+### Built With🛠️
 The project is built with the following technologies:
 
-* [![React][React.js]][React-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* Javascript
-* HTML
-* CSS
-* NODE.JS
+[![React](https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=white)](React-url)
+[![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?logo=bootstrap&logoColor=white)](Bootstrap-url)
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![HTML](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+[![CSS](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+[![Node.js](https://img.shields.io/badge/Node.js-339933?logo=node.js&logoColor=white)](https://nodejs.org/)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
 <!-- GETTING STARTED -->
-## Getting Started
+## Getting Started🚀
 
 Follow these steps to set up ELIIS Calendar on your local machine:
-## Prerequisites
+## Prerequisites⚙️
 
 Make sure you have Node.js and npm installed on your system.
 
-## Installation
+## Installation📥
 
-### Front-End
+### Front-End💻
 1. Clone the repo
    ```sh
    git clone https://github.com/Vladislp/ELIIS-Front-End.git
@@ -108,7 +106,7 @@ Make sure you have Node.js and npm installed on your system.
    ```js
    npm start
    ```
-### Back-End
+### Back-End🚧
 1. Navigate to server folder
    ```js
    cd /eliis-front-end/server
@@ -126,7 +124,7 @@ NB! Might need to do:
 
 
 <!-- USAGE EXAMPLES -->
-## Usage
+## Usage🎮
 
 ELIIS Calendar is designed to be intuitive and user-friendly. Create events, categorize them, and stay organized with ease.
 
@@ -135,15 +133,14 @@ ELIIS Calendar is designed to be intuitive and user-friendly. Create events, cat
 
 
 <!-- ROADMAP -->
-## Roadmap
+## Roadmap🗺️
 
-- [x] Add Changelog
-- [x] Add back to top links
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
+- [x] Additional Templates w/ Examples
+- [x] "Components" Document
 - [ ] Multi-language Support
-    - [ ] Chinese
-    - [ ] Spanish
+- [ ] Consider Adding Tests or Continuous Integration (CI)
+- [ ] Accessibility Improvements
+- [ ] Documentation Improvements
 
 See the [open issues](https://github.com/Vladislp/ELIIS-Front-End/issues) for a full list of proposed features (and known issues).
 
@@ -152,7 +149,7 @@ See the [open issues](https://github.com/Vladislp/ELIIS-Front-End/issues) for a 
 
 
 <!-- CONTRIBUTING -->
-## Contributing
+## Contributing🤝
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
@@ -170,7 +167,7 @@ Don't forget to give the project a star! Thanks again!
 
 
 <!-- LICENSE -->
-## License
+## License📄
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 
@@ -179,7 +176,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 
 <!-- CONTACT -->
-## Contact
+## Contact📧
 
 Vladislav Paskevits - ([https://www.linkedin.com/in/vladislav-paskevits-295b7823a/](https://www.linkedin.com/in/vladislav-paskevits-295b7823a/)) - vladpaskevits27@gmail.com
 
