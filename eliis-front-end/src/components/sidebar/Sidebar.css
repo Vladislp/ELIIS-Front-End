@@ -1,8 +1,31 @@
+/* 
+  .text-sm is already applyed from "personal.css" file
+  .py-2 is applyed from Tailwind.css directly
+  .px-1 is applyed from Tailwind.css directly
+    ~ Makes width more consistend of buttons
+  .border is applyed from Tailwind.css directly
+    ~ Border around button
+  .font-semibold is applyed from Tailwind
+    ~
+*/
 
-.sidebar-with-line {
-  border-right: 2px solid #ccc;
+/* So we don't see dot, behind buttons like a list. */
+.type-menu {
+  list-style: none;
 }
-
+/* Makes the icons round */
+.rounded-md {
+  border-radius: 0.375rem;
+}
+/* Makes the casing of buttons round */
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+/* Makes icons from black --> white */
+.text-white {
+  color: #fff;
+}
+/* Styling for images inside button and button it self */
 .menu-icon-container {
   width: 32px;
   height: 32px;
@@ -11,25 +34,27 @@
   justify-content: center;
   align-items: center;
   margin-right: 8px;
-
+}
+/* Styling for whole side navigation bar */
+.sidebar {
+  color: #444;
+  transition: all 0.3s;
+  width: 19rem;
+  font-size: 16px;
+  min-width: 19rem;
+  max-width: 19rem;
+  height: calc(100vh - 65px);
+  overflow-y: auto;
+  scrollbar-color: #c4c4c4 #eee;
+  scrollbar-width: thin;
+  box-shadow: 2px 0 2px 0 rgba(0,0,0,0.06);
+}
+/* Background styling for buttons */
+.main-gradient {
+  background: linear-gradient(180deg,#fbfbfb 0,#e4e4e4 49%,#dfdfdf 51%,#f6f6f6);
 }
 
-.rounded-md {
-  border-radius: 0.375rem;
-}
-
-.gap-2 {
-  gap: 0.5rem;
-}
-
-.text-white {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-.type-menu {
-  list-style: none;
-}
-
+/* Media query for responsive design */
 @media (max-width: 991.98px) {
   .sidebar {
     position: fixed;
@@ -41,93 +66,4 @@
     transform: translateX(-320px);
     transition: filter .2s ease-in,transform .2s ease-in-out;
   }
-}
-
-.sidebar {
-  color: #444;
-  transition: all .3s;
-  width: 19rem;
-  font-size: 16px;
-  min-width: 19rem;
-  max-width: 19rem;
-  height: calc(100vh - 65px);
-  overflow-y: auto;
-  scrollbar-color: #c4c4c4 #eee;
-  scrollbar-width: thin;
-  text-decoration: none;
-  box-shadow: 2px 0 2px 0 rgba(0,0,0,.06);
-}
-
-.main-gradient {
-  background: linear-gradient(180deg,#fbfbfb 0,#e4e4e4 49%,#dfdfdf 51%,#f6f6f6);
-}
-
-.nav-link {
-  display: flex;
-  align-items: center;
-  padding: 10px 20px; /* Adjust padding as needed */
-  font-size: 10rem; /* Adjust font size as needed */
-}
-
-.bg-gradient-to-b {
-  background-image: none; /* Remove the background image set by bg-gradient-to-b */
-}
-
-.rounded {
-  border-radius: .33rem !important;
-}
-
-.text-sm {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-}
-
-.py-2 {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-}
-
-.px-1 {
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
-}
-
-.to-white {
-  --tw-gradient-to: #fff var(--tw-gradient-to-position);
-}
-
-
-@layer utilities {
-  .via-customGrey {
-    --tw-gradient-to: rgb(226 226 226 / 0) var(--tw-gradient-to-position);
-    --tw-gradient-stops: var(--tw-gradient-from), #e2e2e2 var(--tw-gradient-via-position), var(--tw-gradient-to);
-    background-image: linear-gradient(var(--tw-gradient-to), var(--tw-gradient-stops));
-  }
-}
-
-.from-white {
-  --tw-gradient-from: #fff var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(255 255 255 / 0) var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
-
-.bg-gradient-to-b {
-  background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
-}
-
-.border-stone-300 {
-  --tw-border-opacity: 1;
-  border-color: rgb(214 211 209 / var(--tw-border-opacity));
-}
-
-.border {
-  border-width: 1px;
-}
-
-.rounded-lg {
-  border-radius: 0.5rem;
-}
-
-.font-semibold {
-  font-weight: 600;
 }
