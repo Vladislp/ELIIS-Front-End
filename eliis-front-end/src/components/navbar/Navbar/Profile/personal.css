@@ -21,19 +21,52 @@
 /* For text beside profile logo */
 .font-semibold {
     font-weight: 600;
-    border-left: 1px solid #ccc;
 }
 /* For text style */
 .text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
 }
-/* Should be for color of the second row */
-.text-secondary {
-    background-color: rgb(166, 194, 100);
+/* Positioning of name and company name */
+.custom-measurements-profile-logo {
+  width: 5.964rem;
+  height: 1.5rem;
+  margin-bottom: 1.3rem;
 }
+/* Should be for color of the second row */
+.text-sm.text-secondary {
+    --tw-text-opacity: 1;
+    color: rgb(166 194 100 / var(--tw-text-opacity)) !important;
+  }
 /* Styling for company name */
 .text-sm {
     font-size: 0.875rem;
     line-height: 1.25rem;
 }
+
+@media (min-width: 768px) {
+    .md\:grid-cols-\[2fr_1fr\] {
+      grid-template-columns: 2fr 1fr;
+    }
+  }
+
+  .grid {
+    display: grid;
+  }
+  .gap-2{
+    gap: 0.5rem;
+  }
+  .grid-rows-1 {
+    grid-template-columns: repeat(1, minmax(0,1fr));
+  }
+  .place-items-end {
+    place-items: end;
+  }
+  @media (min-width: 768px) {
+    .md\:flex {
+      display: flex;
+    }
+  }
+  .flex-col {
+    flex-direction:column;
+  }
