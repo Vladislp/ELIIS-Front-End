@@ -4,9 +4,23 @@
     background-color: #fff;
   }
   
-  .content {
-    display: flex;
-    background-color: #fbfbfb;
-    min-height: calc(100vh - 65px);
-  }
-  
+.content {
+  display: flex;
+  background-color: #fbfbfb;
+  min-height: calc(100vh - 65px);
+}
+
+.Full {
+  padding: 0.75rem;
+  width: 100%;
+  display: flex;
+}
+
+.event-calendar-h1 {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.mb-1 {
+  margin-bottom: 1rem;
+}

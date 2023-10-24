@@ -52,8 +52,10 @@ function App() {
 function EventCalendarPage() {
   return (
     <>
+    <div className='Full'>
       <EventCalendarHeader />
       <CalendarS />
+    </div>
     </>
   );
 }
