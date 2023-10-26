@@ -20,6 +20,7 @@
 /* Makes the casing of buttons round */
 .rounded-lg {
   border-radius: 0.5rem;
+  
 }
 /* Makes icons from black --> white */
 .text-white {
@@ -34,6 +35,12 @@
   justify-content: center;
   align-items: center;
   margin-right: 8px;
+}
+.dropdown-open {
+  margin-bottom: calc(2.4rem + 2rem * var(--nav-links, 1.7));
+}
+.chevron-icon {
+  margin-left: auto !important;
 }
 /* Styling for whole side navigation bar */
 .sidebar {
@@ -67,3 +74,20 @@
     transition: filter .2s ease-in,transform .2s ease-in-out;
   }
 }
+
+.custom-dropdown-toggle {
+  color: #444 !important; /* Set text color to black */
+  background-color: transparent !important; /* Set background color to transparent */
+  border: none !important; /* Remove border */
+}
+
+.custom-dropdown-toggle:hover {
+  background-color: transparent !important; /* Set background color to transparent on hover */
+}
+
+.custom-dropdown-toggle::after {
+  border: none !important; /* Remove the caret icon */
+  content: none !important; /* Remove any content (caret icon) */
+}
+
+
