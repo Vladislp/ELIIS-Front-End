@@ -5,6 +5,7 @@ import timeGridPlugin from '@fullcalendar/timegrid';
 import interactionPlugin from '@fullcalendar/interaction';
 import { INITIAL_EVENTS, createEventId } from './event-utils';
 import axios from 'axios';
+import './CalendarS.css';
 import './index.css';
 
 const SERVER_URL = 'http://localhost:3001';
@@ -38,15 +39,15 @@ export default class DemoApp extends React.Component {
 
   render() {
     return (
-      <div className='demo-app'>
+      <div id="custom-calendar" className='demo-app'>
         <div className='demo-app-main'>
           <FullCalendar
             ref={(ref) => (this.calendarRef = ref)}
             plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
             headerToolbar={{
-              left: 'createEventButton prev,next today',
+              left: 'createEventButton',
               center: 'title',
-              right: 'dayGridMonth,timeGridWeek,timeGridDay'
+              right: 'prev next'
             }}
             initialView='dayGridMonth'
             editable={true}
@@ -54,6 +55,7 @@ export default class DemoApp extends React.Component {
             selectMirror={true}
             dayMaxEvents={true}
             updateSize={true}
+            //Color events based on type: TODO eventColor='red'
             height={'auto'}
             weekends={this.state.weekendsVisible}
             initialEvents={INITIAL_EVENTS}
