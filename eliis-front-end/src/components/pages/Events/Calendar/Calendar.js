@@ -1,139 +1,37 @@
-import React from 'react';
+// DemoApp.jsx
+
+import React, { useState } from 'react';
 import FullCalendar from '@fullcalendar/react';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';
 import interactionPlugin from '@fullcalendar/interaction';
 import { INITIAL_EVENTS, createEventId } from './event-utils';
-import axios from 'axios';
 import './CalendarS.css';
 import './index.css';
+import StaticExample from './modal';
 
 const SERVER_URL = 'http://localhost:3001';
 
-export default class DemoApp extends React.Component {
+export default function DemoApp() {
+  const [weekendsVisible, setWeekendsVisible] = useState(true);
+  const [currentEvents, setCurrentEvents] = useState([]);
+  const [calendarRef, setCalendarRef] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      weekendsVisible: true,
-      currentEvents: [],
-      calendarRef: null,
-    };
-  }
-
-  componentDidMount() {
-    // Fetch events from localStorage when the component is mounted
-    this.fetchEventsFromLocal();
-  }
-  
-  // Function to fetch events from localStorage
-  fetchEventsFromLocal = () => {
-    // Get events from localStorage
-    const events = JSON.parse(localStorage.getItem('events')) || [];
-  
-    // Set the events in the calendar
-    if (this.calendarRef) {
-      this.calendarRef.getApi().addEventSource(events);
-    }
+  const handleCreateEventClick = () => {
+    setIsModalOpen(true);
   };
 
-  render() {
-    return (
-      <div id="custom-calendar" className='demo-app'>
-        <div className='demo-app-main'>
-          <FullCalendar
-            ref={(ref) => (this.calendarRef = ref)}
-            plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
-            headerToolbar={{
-              left: 'createEventButton',
-              center: 'title',
-              right: 'prev next'
-            }}
-            initialView='dayGridMonth'
-            editable={true}
-            selectable={true}
-            selectMirror={true}
-            dayMaxEvents={true}
-            updateSize={true}
-            //Color events based on type: TODO eventColor='red'
-            height={'auto'}
-            weekends={this.state.weekendsVisible}
-            initialEvents={INITIAL_EVENTS}
-            select={this.handleDateSelect}
-            eventContent={this.renderEventContent} // Use 'this' to refer to class functions
-            eventClick={this.handleEventClick}
-            eventsSet={this.handleEvents}
-            customButtons={{
-              createEventButton: {
-                text: 'Create Event',
-                click: this.handleCreateEventClick,
-              },
-            }}
-          />
-        </div>
-      </div>
-    )
-  }
-  
-
-  handleCreateEventClick = () => {
-    const title = prompt('Please enter a title for your new event');
-    if (title) {
-      const calendarApi = this.calendarRef.getApi();
-      const newEvent = {
-        id: createEventId(),
-        title,
-        start: new Date().toISOString(), // Convert to ISO format
-        allDay: true,
-      };
-  
-      // Save the new event to localStorage
-      this.saveEventToLocal(newEvent);
-  
-      // Add the new event directly to the calendar
-      calendarApi.addEvent(newEvent);
-    }
-  };
-  
-  // Function to save the event to localStorage
-  saveEventToLocal = (event) => {
-    // Get existing events from localStorage or initialize an empty array
-    const existingEvents = JSON.parse(localStorage.getItem('events')) || [];
-  
-    // Add the new event to the array
-    existingEvents.push(event);
-  
-    // Save the updated events array back to localStorage
-    localStorage.setItem('events', JSON.stringify(existingEvents));
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
   };
 
-  
-  fetchEvents = async () => {
-    try {
-      const response = await axios.get(`${SERVER_URL}/getEvents`);
-      const events = response.data;
-      // Set the events in the calendar
-      if (this.calendarRef) {
-        this.calendarRef.getApi().addEventSource(events);
-      }
-    } catch (error) {
-      console.error('Error fetching events:', error);
-    }
-  };
-  
-
-  handleWeekendsToggle = () => {
-    this.setState({
-      weekendsVisible: !this.state.weekendsVisible
-    })
-  }
-
-  handleDateSelect = (selectInfo) => {
+  const handleDateSelect = (selectInfo) => {
     let title = prompt('Please enter a new title for your event');
     let calendarApi = selectInfo.view.calendar;
-  
-    calendarApi.unselect(); // clear date selection
-  
+
+    calendarApi.unselect();
+
     if (title) {
       const newEvent = {
         id: createEventId(),
@@ -142,59 +40,86 @@ export default class DemoApp extends React.Component {
         end: selectInfo.endStr,
         allDay: selectInfo.allDay,
       };
-  
-      // Save the new event to localStorage
-      this.saveEventToLocal(newEvent);
-  
-      // Add the new event directly to the calendar
-      calendarApi.addEvent(newEvent);
+
+      setCurrentEvents([...currentEvents, newEvent]);
+      saveEventToLocal(newEvent);
     }
   };
-  
-  // Function to save the event to localStorage
-  saveEventToLocal = (event) => {
-    // Get existing events from localStorage or initialize an empty array
+
+  const saveEventToLocal = (event) => {
     const existingEvents = JSON.parse(localStorage.getItem('events')) || [];
-  
-    // Add the new event to the array
     existingEvents.push(event);
-  
-    // Save the updated events array back to localStorage
     localStorage.setItem('events', JSON.stringify(existingEvents));
   };
 
-  handleEventClick = (eventClickInfo) => {
-    if (window.confirm(`Are you sure you want to delete the event '${eventClickInfo.event.title}'?`)) {
-      this.deleteEvent(eventClickInfo.event);
+  const fetchEventsFromLocal = () => {
+    const events = JSON.parse(localStorage.getItem('events')) || [];
+    if (calendarRef) {
+      calendarRef.getApi().addEventSource(events);
     }
   };
-  
-  deleteEvent = (eventToDelete) => {
-    const calendarApi = this.calendarRef.getApi();
-    calendarApi.getEventById(eventToDelete.id).remove(); // Remove the event from the FullCalendar
-  
-    const updatedEvents = this.state.currentEvents.filter((event) => event.id !== eventToDelete.id);
-  
-    this.setState({
-      currentEvents: updatedEvents,
-    });
-  };  
 
-
-  handleEvents = (events) => {
-    this.setState({
-      currentEvents: events
-    })
-  }
-
-  renderEventContent(eventInfo) {
+  const renderEventContent = (eventInfo) => {
     return (
       <>
         <b>{eventInfo.timeText}</b>
         <i>{eventInfo.event.title}</i>
       </>
-    )
-  }
+    );
+  };
+
+  const handleEventClick = (eventClickInfo) => {
+    if (window.confirm(`Are you sure you want to delete the event '${eventClickInfo.event.title}'?`)) {
+      deleteEvent(eventClickInfo.event);
+    }
+  };
+
+  const deleteEvent = (eventToDelete) => {
+    const calendarApi = calendarRef.getApi();
+    calendarApi.getEventById(eventToDelete.id).remove();
+
+    const updatedEvents = currentEvents.filter((event) => event.id !== eventToDelete.id);
+    setCurrentEvents(updatedEvents);
+  };
+
+  const handleEvents = (events) => {
+    setCurrentEvents(events);
+  };
+
+  return (
+    <div id="custom-calendar" className="demo-app">
+      <div className="demo-app-main">
+        <FullCalendar
+          ref={(ref) => setCalendarRef(ref)}
+          plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
+          headerToolbar={{
+            left: 'createEventButton',
+            center: 'title',
+            right: 'prev next',
+          }}
+          initialView="dayGridMonth"
+          editable={true}
+          selectable={true}
+          selectMirror={true}
+          dayMaxEvents={true}
+          updateSize={true}
+          height={'auto'}
+          weekends={weekendsVisible}
+          initialEvents={INITIAL_EVENTS}
+          select={handleDateSelect}
+          eventContent={renderEventContent}
+          eventClick={handleEventClick}
+          eventsSet={handleEvents}
+          customButtons={{
+            createEventButton: {
+              text: 'Create Event',
+              click: handleCreateEventClick,
+            },
+          }}
+        />
+      </div>
+
+      {isModalOpen && <StaticExample onClose={handleCloseModal} />}
+    </div>
+  );
 }
-
-
