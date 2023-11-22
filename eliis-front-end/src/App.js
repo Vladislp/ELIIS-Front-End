@@ -1,21 +1,23 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 import './App.css';
 import Navigation from './components/navbar/Navbar/navbar';
 import Sidebar from './components/sidebar/Sidebar';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import CalendarS from './components/pages/Events/Calendar/Calendar';
-import EventCalendarHeader from './components/event-calender/Event-Calendar';
-import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
-import Dashboard from './components/pages/Dashboard/dashboard';
+import Dashboard from './components/pages/Application Components/Dashboard/dashboard';
 import Messages from './components/pages/Messages/messages';
-import Gallery from './components/pages/Gallery/gallery';
+import Gallery from './components/pages/Application Components/Gallery/gallery';
 import Help from './components/pages/Help/help';
-import CardWithFeedback from './components/pages/Surveys/survey';
+import CardWithFeedback from './components/pages/Application Components/Surveys/survey';
 import Delivery from './components/pages/Contacts/contact';
-import Cards from './components/pages/Documents/documents';
-import Applications from './components/pages/Applications/application';
-import Schedule from './components/pages/Work Schedule/schedule';
-import Announcements from './components/pages/Announcements/announcements';
+import Cards from './components/pages/Application Components/Documents/documents';
+import Applications from './components/pages/Application Components/Applications/application';
+import Schedule from './components/pages/Organizational Components/Work Schedule/schedule';
+import Announcements from './components/pages/Informational Components/Announcements/announcements';
+import EventCalendarHeader from './components/event-calender/Event-Calendar';
+import CalendarS from './components/pages/Events/Calendar/Calendar';
 
 function App() {
   return (
@@ -42,8 +44,6 @@ function App() {
             </Routes>
           </div>
         </main>
-        <footer>
-        </footer>
       </div>
     </Router>
   );
