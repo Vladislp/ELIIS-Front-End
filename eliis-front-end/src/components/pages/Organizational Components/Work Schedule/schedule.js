@@ -6,7 +6,6 @@ import {
   MDBContainer,
   MDBIcon,
 } from "mdb-react-ui-kit";
-import './schedule.css';
 
 export default function Schedule() {
   return (

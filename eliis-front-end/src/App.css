@@ -14,3 +14,543 @@
   width: 100%;
   display: flex;
 }
+
+/* Event Calendar CSS */
+
+@font-face {
+  font-family: 'VinaSans-Regular';
+  src: url('../fonts/VinaSans-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.rounded-full {
+  border-radius: 9999px;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.w-6 {
+  width: 1.5rem;
+}
+
+.h-6 {
+  height: 1.5rem;
+}
+
+/* Background colors */
+.bg-Coral {
+  --tw-bg-opacity: 1;
+  background-color: rgb(247 158 128 / var(--tw-bg-opacity));
+}
+
+.bg-Olive-Green {
+  background-color: rgb(166, 194, 100);
+}
+
+.bg-Rose-Pink {
+  --tw-bg-opacity: 1;
+  background-color: rgb(224 130 177 / var(--tw-bg-opacity));
+}
+
+.bg-Tomato-Red {
+  --tw-bg-opacity: 1;
+  background-color: rgb(235 94 93 / var(--tw-bg-opacity));
+}
+
+.bg-Muted-Pink {
+  --tw-bg-opacity: 1;
+  background-color: rgb(204 121 121 / var(--tw-bg-opacity));
+}
+
+.bg-Mustard-Yellow {
+  --tw-bg-opacity: 1;
+  background-color: rgb(239 173 78 / var(--tw-bg-opacity));
+}
+
+.bg-Teal {
+  --tw-bg-opacity: 1;
+  background-color: rgb(115 202 194 / var(--tw-bg-opacity));
+}
+
+.bg-Sky-Blue {
+  --tw-bg-opacity: 1;
+  background-color: rgb(92 192 222 / var(--tw-bg-opacity));
+}
+
+/* Special style for white background with red border */
+.bg-White-Red-Outline {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255, 255, 255, var(--tw-bg-opacity));
+  border: 1px solid red;
+}
+
+/* Event Calendar Ends */
+
+/* Personal.js start */
+
+/* Style of checkmark component */
+.e3-img-overlay {
+  position: absolute;
+  right: 0.4rem;
+  bottom: 0.1rem;
+  line-height: 12px;
+}
+/* Style for chevron and circle */
+.e3-white-fill-icon {
+  background: #fff;
+  border: .1rem solid #f79e80;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+}
+/* Background style for profile circle */
+.military-color {
+  background-color: rgb(166, 194, 100);
+  -webkit-text-fill-color: white;
+}
+/* For text beside profile logo */
+.font-semibold {
+  font-weight: 600;
+}
+/* For text style */
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+/* Positioning of name and company name */
+.custom-measurements-profile-logo {
+width: 5.964rem;
+height: 1.5rem;
+margin-bottom: 1.3rem;
+}
+/* Should be for color of the second row */
+.text-sm.text-secondary {
+  --tw-text-opacity: 1;
+  color: rgb(166 194 100 / var(--tw-text-opacity)) !important;
+}
+/* Styling for company name */
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .md\:grid-cols-\[2fr_1fr\] {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+.grid {
+  display: grid;
+}
+.gap-2{
+  gap: 0.5rem;
+}
+.grid-rows-1 {
+  grid-template-columns: repeat(1, minmax(0,1fr));
+}
+.place-items-end {
+  place-items: end;
+}
+@media (min-width: 768px) {
+  .md\:flex {
+    display: flex;
+  }
+}
+.flex-col {
+  flex-direction:column;
+}
+
+/* Personal.js ENDS */
+
+/* NavbarItems.js START */
+.border-right {
+  border-right: 10px solid #ccc;
+}
+
+.rounded-full {
+  border-radius: 9999px;
+}
+
+/* Styling for images inside button and button it self */
+.menu-icon-container {
+  width: 32px;
+  height: 32px;
+  background: linear-gradient(#f79e80,#e58565);
+}
+
+@media only screen and (max-width: 600px) {
+  .d-flex .justify-content-end {
+      display: none;
+  }
+}
+/* NavbarItems.js END */
+
+/* Application.js START */
+.gradient-custom-2 {
+  /* fallback for old browsers */
+  background: #fbc2eb;
+  
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to right, rgba(251, 194, 235, 1), rgba(166, 193, 238, 1));
+  
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, rgba(251, 194, 235, 1), rgba(166, 193, 238, 1))
+  }
+/* Application.js END */
+
+/* Callendar.js START */
+/* Media quaeries */
+
+/* CalendarS.css */
+.calendar-container {
+  width: 100%; /* Set the width to 100% */
+  height: 60vh; /* Set the height to 60% of the viewport height */
+}
+.fc-button-primary {
+  color: #FFF;
+  background: linear-gradient(#f79e80,#e58565);
+  border-color: #FFFFFF !important;
+}
+
+.fc-col-header-cell-cushion {
+  color: black;
+  text-decoration: none;
+}
+
+#custom-calendar .fc-day-sat,
+#custom-calendar .fc-day-sun {
+  color: #eb5e5d;
+}
+
+.fc-daygrid-day-number {
+  color: black;
+  text-decoration: none;
+}
+
+/* Common styles */
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.rounded-full {
+  border-radius: 9999px;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.w-6 {
+  width: 1.5rem;
+}
+
+.h-6 {
+  height: 1.5rem;
+}
+
+/* Background colors */
+.bg-Coral {
+  --tw-bg-opacity: 1;
+  background-color: rgb(247 158 128 / var(--tw-bg-opacity));
+}
+
+.bg-Olive-Green {
+  background-color: rgb(166, 194, 100);
+}
+
+.bg-Rose-Pink {
+  --tw-bg-opacity: 1;
+  background-color: rgb(224 130 177 / var(--tw-bg-opacity));
+}
+
+.bg-Tomato-Red {
+  --tw-bg-opacity: 1;
+  background-color: rgb(235 94 93 / var(--tw-bg-opacity));
+}
+
+.bg-Muted-Pink {
+  --tw-bg-opacity: 1;
+  background-color: rgb(204 121 121 / var(--tw-bg-opacity));
+}
+
+.bg-Mustard-Yellow {
+  --tw-bg-opacity: 1;
+  background-color: rgb(239 173 78 / var(--tw-bg-opacity));
+}
+
+.bg-Teal {
+  --tw-bg-opacity: 1;
+  background-color: rgb(115 202 194 / var(--tw-bg-opacity));
+}
+
+.bg-Sky-Blue {
+  --tw-bg-opacity: 1;
+  background-color: rgb(92 192 222 / var(--tw-bg-opacity));
+}
+
+/* Special style for white background with red border */
+.bg-White-Red-Outline {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255, 255, 255, var(--tw-bg-opacity));
+  border: 1px solid red;
+}
+
+/* Callendar.js END */
+
+/* index.css inside calendar folder START */
+
+html,
+body,
+body > div { /* the react root */
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+h2 {
+  margin: 0;
+  font-size: 16px;
+}
+
+ul {
+  margin: 0;
+  padding: 0 0 0 1.5em;
+}
+
+li {
+  margin: 0.5rem 0;
+  padding: 0;
+}
+
+b { /* used for event dates/times */
+  margin-right: 3px;
+}
+
+.demo-app {
+  display: flex;
+  min-height: 100%;
+  font-family: 'Open Sans', 'Roboto';
+  font-size: 14px;
+}
+
+.demo-app-main {
+  flex-grow: 1;
+  padding: 3em;
+}
+
+.fc { /* the calendar root */
+  max-width: 1100px;
+  margin: 0 auto;
+}
+/* index.css inside calendar folder END */
+
+/* Announcements.js START */
+ul.timeline-3 {
+  list-style-type: none;
+  position: relative;
+}
+ul.timeline-3:before {
+  content: " ";
+  background: #d4d9df;
+  display: inline-block;
+  position: absolute;
+  left: 29px;
+  width: 2px;
+  height: 100%;
+  z-index: 400;
+}
+ul.timeline-3 > li {
+  margin: 20px 0;
+  padding-left: 20px;
+}
+ul.timeline-3 > li:before {
+  content: " ";
+  background: white;
+  display: inline-block;
+  position: absolute;
+  border-radius: 50%;
+  border: 3px solid #22c0e8;
+  left: 20px;
+  width: 20px;
+  height: 20px;
+  z-index: 400;
+}
+/* Announcements.js END */
+
+/* Messages.js START */
+.gradient-custom {
+  /* fallback for old browsers */
+  background: #fccb90;
+
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(
+    to bottom right,
+    rgba(252, 203, 144, 1),
+    rgba(213, 126, 235, 1)
+  );
+
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(
+    to bottom right,
+    rgba(252, 203, 144, 1),
+    rgba(213, 126, 235, 1)
+  );
+}
+
+.mask-custom {
+  background: rgba(24, 24, 16, 0.2);
+  border-radius: 2em;
+  backdrop-filter: blur(15px);
+  border: 2px solid rgba(255, 255, 255, 0.05);
+  background-clip: padding-box;
+  box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.03);
+}
+/* Messages.js END */
+
+/* Sidebar.js START */
+/* 
+  .text-sm is already applyed from "personal.css" file
+  .py-2 is applyed from Tailwind.css directly
+  .px-1 is applyed from Tailwind.css directly
+    ~ Makes width more consistend of buttons
+  .border is applyed from Tailwind.css directly
+    ~ Border around button
+  .font-semibold is applyed from Tailwind
+    ~
+*/
+
+/* So we don't see dot, behind buttons like a list. */
+.type-menu {
+  list-style: none;
+}
+/* Makes the icons round */
+.rounded-md {
+  border-radius: 0.375rem;
+}
+/* Makes the casing of buttons round */
+.rounded-lg {
+  border-radius: 0.5rem;
+  
+}
+/* Makes icons from black --> white */
+.text-white {
+  color: #fff;
+}
+/* Styling for images inside button and button it self */
+.menu-icon-container {
+  width: 32px;
+  height: 32px;
+  background: linear-gradient(#f79e80,#e58565);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 8px;
+}
+.dropdown-open {
+  margin-bottom: calc(2.4rem + 2rem * var(--nav-links, 1.7));
+}
+.chevron-icon {
+  margin-left: auto !important;
+}
+/* Styling for whole side navigation bar */
+.sidebar {
+  color: #444;
+  transition: all 0.3s;
+  width: 19rem;
+  font-size: 16px;
+  min-width: 19rem;
+  max-width: 19rem;
+  height: calc(100vh - 65px);
+  overflow-y: auto;
+  scrollbar-color: #c4c4c4 #eee;
+  scrollbar-width: thin;
+  box-shadow: 2px 0 2px 0 rgba(0,0,0,0.06);
+}
+/* Background styling for buttons */
+.main-gradient {
+  background: linear-gradient(180deg,#fbfbfb 0,#e4e4e4 49%,#dfdfdf 51%,#f6f6f6);
+}
+
+/* Media query for responsive design */
+@media (max-width: 991.98px) {
+  .sidebar {
+    position: fixed;
+    background-color: #fff;
+    z-index: 103;
+    width: 100%;
+    max-width: 320px;
+    min-width: 320px;
+    transform: translateX(-320px);
+    transition: filter .2s ease-in,transform .2s ease-in-out;
+  }
+}
+
+.custom-dropdown-toggle {
+  color: #444 !important; /* Set text color to black */
+  background-color: transparent !important; /* Set background color to transparent */
+  border: none !important; /* Remove border */
+}
+
+.custom-dropdown-toggle:hover {
+  background-color: transparent !important; /* Set background color to transparent on hover */
+}
+
+.custom-dropdown-toggle::after {
+  border: none !important; /* Remove the caret icon */
+  content: none !important; /* Remove any content (caret icon) */
+}
+
+
+
+/* Sidebar.js END */

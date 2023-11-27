@@ -11,7 +11,7 @@ import {
   MDBTextArea,
   MDBCardHeader,
 } from "mdb-react-ui-kit";
-import './messages.css';
+import '../../../../App.css';
 
 export default function App() {
   return (
