@@ -8,8 +8,8 @@ import interactionPlugin from '@fullcalendar/interaction';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import { Dropdown } from 'react-bootstrap';
-import './CalendarS.css';
-import './index.css';
+import '../../../../App.css';
+import '../../../../App.css';
 import Icon from '@mdi/react';
 import { mdiCheck } from '@mdi/js';
 

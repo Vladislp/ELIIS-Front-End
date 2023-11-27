@@ -1,5 +1,5 @@
 import React from 'react';
-import './personal.css';
+import '../../../../App.css';
 
 const Personal = () => {
   return (

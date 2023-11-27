@@ -11,6 +11,21 @@
         font-family: Arial, sans-serif;
       }
     </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>
+      WebFont.load({
+        google: {
+          families: ['Roboto:300,400,500,700', 'Open+Sans:400,700'],
+        },
+        loading: function () {
+          console.log('Fonts are loading...');
+        },
+        active: function () {
+          console.log('Fonts have been loaded.');
+        },
+      });
+    </script>
+       
     <link rel="canonical" href="https://vp-web-development-showcase.netlify.app/">
     <link rel="icon" type="image/svg+xml" href="https://upload.wikimedia.org/wikipedia/commons/0/0b/Eo_circle_light-green_white_letter-e.svg">
     <meta name="viewport" content="width=device-width, initial-scale=1">
