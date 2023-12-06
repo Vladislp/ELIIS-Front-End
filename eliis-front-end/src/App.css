@@ -15,6 +15,14 @@
   display: flex;
 }
 
+.switch-active .custom-control-input:checked ~ .custom-control-label::before {
+  background-color: #007bff;
+}
+
+.switch-inactive .custom-control-input:checked ~ .custom-control-label::before {
+  background-color: #ccc;
+}
+
 /* Event Calendar CSS */
 
 @font-face {
