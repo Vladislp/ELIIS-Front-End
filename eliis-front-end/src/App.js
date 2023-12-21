@@ -1,11 +1,13 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 // Components
 import Navigation from './components/navbar/Navbar/navbar';
 import Sidebar from './components/sidebar/Sidebar';
+
 import EventCalendarHeader from './components/event-calender/Event-Calendar';
 import CalendarS from './components/pages/Events/Calendar/Calendar';
 
@@ -48,8 +50,6 @@ function App() {
             </Routes>
           </div>
         </main>
-        <footer>
-        </footer>
       </div>
     </Router>
   );

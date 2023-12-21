@@ -19,7 +19,7 @@ import {
   mdiChevronRight,
   mdiChevronDown,
 } from '@mdi/js';
-import './Sidebar.css';
+import '../../App.css';
 import Dropdown from 'react-bootstrap/Dropdown';
 
 const Sidebar = () => {

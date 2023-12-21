@@ -1,6 +1,6 @@
 import React from "react";
 import { MDBCol, MDBContainer, MDBRow } from "mdb-react-ui-kit";
-
+import '../../../../App.css';
 export default function Announcements() {
   return (
     <MDBContainer className="py-5">

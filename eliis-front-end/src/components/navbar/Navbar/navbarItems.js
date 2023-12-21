@@ -3,7 +3,7 @@ import Icon from '@mdi/react';
 import { NavLink } from 'react-router-dom';
 import { mdiBell, mdiBullhorn, mdiMessageText, mdiCalendarOutline, mdiCloud } from '@mdi/js';
 import Col from 'react-bootstrap/Col';
-import './navbarItems.css';
+import '../../../App.css';
 
 const IconButton = ({ to, path, badge, label, className }) => (
   <NavLink to={to} className={`mx-2 position-relative ${className}`}>
