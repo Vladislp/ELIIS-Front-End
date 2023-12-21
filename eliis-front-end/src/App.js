@@ -2,22 +2,28 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-
 import './App.css';
+
+// Components
 import Navigation from './components/navbar/Navbar/navbar';
 import Sidebar from './components/sidebar/Sidebar';
-import Dashboard from './components/pages/Application Components/Dashboard/dashboard';
-import Messages from './components/pages/Informational Components/Messages/messages';
-import Gallery from './components/pages/Application Components/Gallery/gallery';
-import Help from './components/pages/Informational Components/Help/help';
-import CardWithFeedback from './components/pages/Application Components/Surveys/survey';
-import Delivery from './components/pages/Informational Components/Contacts/contact';
-import Cards from './components/pages/Application Components/Documents/documents';
-import Applications from './components/pages/Application Components/Applications/application';
-import Schedule from './components/pages/Organizational Components/Work Schedule/schedule';
-import Announcements from './components/pages/Informational Components/Announcements/announcements';
+
 import EventCalendarHeader from './components/event-calender/Event-Calendar';
 import CalendarS from './components/pages/Events/Calendar/Calendar';
+
+// Application Components
+const Dashboard = React.lazy(() => import('./components/pages/Application Components/Dashboard/dashboard'));
+const Gallery = React.lazy(() => import('./components/pages/Application Components/Gallery/gallery'));
+const CardWithFeedback = React.lazy(() => import('./components/pages/Application Components/Surveys/survey'));
+const Cards = React.lazy(() => import('./components/pages/Application Components/Documents/documents'));
+const Applications = React.lazy(() => import('./components/pages/Application Components/Applications/application'));
+const Schedule = React.lazy(() => import('./components/pages/Organizational Components/Work Schedule/schedule'));
+
+// Informational Components
+const Messages = React.lazy(() => import('./components/pages/Informational Components/Messages/messages'));
+const Help = React.lazy(() => import('./components/pages/Informational Components/Help/help'));
+const Delivery = React.lazy(() => import('./components/pages/Informational Components/Contacts/contact'));
+const Announcements = React.lazy(() => import('./components/pages/Informational Components/Announcements/announcements'));
 
 function App() {
   return (
@@ -52,10 +58,12 @@ function App() {
 function EventCalendarPage() {
   return (
     <>
-    <div className='Full'>
-      <EventCalendarHeader />
-      <CalendarS />
-    </div>
+      <div className='Full'>
+        <EventCalendarHeader />
+        <React.Suspense fallback={<div>Loading...</div>}>
+          <CalendarS />
+        </React.Suspense>
+      </div>
     </>
   );
 }
