@@ -261,7 +261,8 @@ margin-bottom: 1.3rem;
   border-color: var(--fc-button-border-color);
   color: coral;
 }
-  color: #FFF;
+.fc-createEventButton-button {
+  color: #FFF !important;
   background: linear-gradient(#f79e80,#e58565);
   border-color: #FFFFFF !important;
 }

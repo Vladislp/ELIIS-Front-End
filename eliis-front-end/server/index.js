@@ -5,7 +5,7 @@ const fs = require('fs/promises'); // Using fs.promises for async/await
 const rateLimit = require('express-rate-limit');
 
 const app = express();
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 3002;
 const DATABASE_FILE = 'myDatabase.json';
 
 // Middleware to parse JSON bodies
