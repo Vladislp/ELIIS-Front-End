@@ -85,6 +85,7 @@ export default function DemoApp() {
 
         <Modal.Body>
           <div>
+          <Form.Label>Type of Event</Form.Label>
             <Dropdown>
               <Dropdown.Toggle variant="success" id="dropdown-basic">
                 {choosenItem || "Choose type of event"}
@@ -127,7 +128,7 @@ export default function DemoApp() {
           <div>
             {titleChange ? (
               <LocalizationProvider dateAdapter={AdapterDayjs}>
-                <DatePicker value={dateChange} onChange={(date) => changeDate(date)} />
+                <DatePicker value={dateChange} type="date" onChange={(date) => changeDate(date)} />
               </LocalizationProvider>
             ) : null}
           </div>
@@ -155,6 +156,7 @@ export default function DemoApp() {
                 <Form.Control
                   as="textarea"
                   rows={3}
+                  type="text"
                   value={eventDescription}
                   onChange={(e) => setEventDescription(e.target.value)}
                 />
