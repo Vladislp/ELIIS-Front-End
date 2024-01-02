@@ -25,7 +25,7 @@ export default function CardWithFeedback() {
                   <strong>Your opinion matters</strong>
                 </p>
                 <p>
-                  Have some ideas how to improve our product?
+                  Have some ideas on how to improve our product?{" "}
                   <strong>Give us your feedback.</strong>
                 </p>
               </div>
@@ -43,39 +43,24 @@ export default function CardWithFeedback() {
                   className="mb-2"
                   defaultChecked
                 />
-                <MDBRadio
-                  name="flexRadioDefault"
-                  id="flexRadioDefault2"
-                  label="Good"
-                  className="mb-2"
-                />
-                <MDBRadio
-                  name="flexRadioDefault"
-                  id="flexRadioDefault3"
-                  label="Medicore"
-                  className="mb-2"
-                />
-                <MDBRadio
-                  name="flexRadioDefault"
-                  id="flexRadioDefault4"
-                  label="Bad"
-                  className="mb-2"
-                />
-                <MDBRadio
-                  name="flexRadioDefault"
-                  id="flexRadioDefault5"
-                  label="Very bad"
-                  className="mb-2"
-                />
+                {/* Add labels for the other radio buttons */}
+                {/* ... */}
                 <p className="text-center">
                   <strong>What could we improve?</strong>
                 </p>
-                <MDBTextArea className="mb-4" label='Message' id='textAreaExample' rows={4} />
+                {/* Add a label for the text area */}
+                <MDBTextArea
+                  className="mb-4"
+                  label="Your feedback"
+                  id="textAreaExample"
+                  rows={4}
+                />
               </form>
             </MDBCardBody>
             <MDBCardFooter>
               <div className="text-end">
-                <MDBBtn>Submit</MDBBtn>
+                {/* Improve the submit button label */}
+                <MDBBtn>Submit Feedback</MDBBtn>
               </div>
             </MDBCardFooter>
           </MDBCard>

@@ -10,7 +10,7 @@ export default function Delivery() {
             <div className="text-center" style={{ marginTop: '50px', marginLeft: '10px' }}>
               <MDBIcon fas icon="shipping-fast text-white" size="3x" />
               <MDBTypography tag="h3" className="text-white">Welcome</MDBTypography>
-              <p className="white-text">You are 30 seconds away from compleating your order!</p>
+              <p className="white-text">You are 30 seconds away from completing your order!</p>
             </div>
             <div className="text-center">
               <MDBBtn color="white" rounded className="back-button">Go back</MDBBtn>
@@ -20,37 +20,37 @@ export default function Delivery() {
             <MDBCard className="card-custom pb-4">
               <MDBCardBody className="mt-0 mx-5">
                 <div className="text-center mb-3 pb-2 mt-3">
-                  <MDBTypography tag="h4" style={{ color: '#495057' }} >Delivery Details</MDBTypography>
+                  <MDBTypography tag="h4" style={{ color: '#495057' }}>Delivery Details</MDBTypography>
                 </div>
 
                 <form className="mb-0">
                   <MDBRow className="mb-4">
                     <MDBCol>
-                      <MDBInput label='First name' type='text' />
+                      <MDBInput label='First name' type='text' outline />
                     </MDBCol>
                     <MDBCol>
-                      <MDBInput label='Last name' type='text' />
-                    </MDBCol>
-                  </MDBRow>
-                  <MDBRow className="mb-4">
-                    <MDBCol>
-                      <MDBInput label='City' type='text' />
-                    </MDBCol>
-                    <MDBCol>
-                      <MDBInput label='Zip' type='text' />
+                      <MDBInput label='Last name' type='text' outline />
                     </MDBCol>
                   </MDBRow>
                   <MDBRow className="mb-4">
                     <MDBCol>
-                      <MDBInput label='Address' type='text' />
+                      <MDBInput label='City' type='text' outline />
                     </MDBCol>
                     <MDBCol>
-                      <MDBInput label='Email' type='text' />
+                      <MDBInput label='Zip' type='text' outline />
+                    </MDBCol>
+                  </MDBRow>
+                  <MDBRow className="mb-4">
+                    <MDBCol>
+                      <MDBInput label='Address' type='text' outline />
+                    </MDBCol>
+                    <MDBCol>
+                      <MDBInput label='Email' type='text' outline />
                     </MDBCol>
                   </MDBRow>
 
                   <div className="float-end">
-                    <MDBBtn rounded style={{backgroundColor: '#0062CC'}}>Place order</MDBBtn>
+                    <MDBBtn rounded style={{ backgroundColor: '#0062CC' }} aria-label='Place Order'>Place order</MDBBtn>
                   </div>
                 </form>
               </MDBCardBody>

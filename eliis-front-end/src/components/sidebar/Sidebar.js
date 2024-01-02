@@ -122,7 +122,7 @@ const Sidebar = () => {
     if (isDropdown) {
       return (
         <Dropdown show={isDropdownOpen} onToggle={handleDropdownToggle}>
-          <Dropdown.Toggle as={NavLink} className="custom-dropdown-toggle nav-link">
+          <Dropdown.Toggle as={NavLink} className="custom-dropdown-toggle nav-link" aria-label={label}>
             <div className={`border rounded-lg font-semibold py-2 px-1 text-sm main-gradient ${isDropdownOpen ? 'dropdown-open' : ''}`}>
               <div className="menu-icon-container text-white rounded-md">
                 <Icon path={icon} size={1} />
@@ -139,7 +139,7 @@ const Sidebar = () => {
     }
   
     return (
-      <NavLink to={to} className="nav-link">
+      <NavLink to={to} className="nav-link" aria-label={label}>
         <div className="border rounded-lg font-semibold py-2 px-1 text-sm main-gradient">
           <div className="menu-icon-container text-white rounded-md">
             <Icon path={icon} size={1} />
@@ -153,8 +153,8 @@ const Sidebar = () => {
 
   return (
     <div className="sidebar">
-      <nav>
-        <ul className="p-4 type-menu">
+      <nav className="p-4 type-menu">
+        <ul className="list-unstyled">
           {menuItems.map((item, index) => (
             <li key={index}>
               <ButtonLink to={item.to} label={item.label} icon={item.icon} />
