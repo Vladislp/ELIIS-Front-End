@@ -33,6 +33,9 @@ function App() {
           <Navigation />
         </header>
         <main>
+          <div className='header'>
+            <h1 className='mobile-heading'>Event Calendar</h1>
+          </div>
           <div className="content">
             <Sidebar />
             <Routes>
