@@ -9,6 +9,35 @@
   min-height: calc(100vh - 65px);
 }
 
+
+
+@media (max-width: 800px) {
+  .fc .fc-toolbar-title {
+    font-size: 1.2rem;
+  }
+}
+
+.navbar-toggler-icon span {
+  background-color: #f79e80;
+}
+
+/* Default styling for the header */
+.header {
+  display: none;
+}
+
+/* Styling for the mobile-heading within the media query */
+@media (max-width: 800px) {
+  .mobile-heading {
+    margin: 12px;
+  }
+
+  .header {
+    display: contents;
+    margin-top: 10px; /* Move the header down */
+  }
+}
+
 .Full {
   padding: 0.75rem;
   width: 100%;
@@ -155,10 +184,37 @@
 }
 /* Positioning of name and company name */
 .custom-measurements-profile-logo {
-width: 5.964rem;
-height: 1.5rem;
-margin-bottom: 1.3rem;
+  width: 5.964rem;
+  height: 1.5rem;
+  margin-bottom: 1.3rem;
 }
+
+@media (max-width: 800px) {
+  .custom-measurements-profile-logo {
+    display: none !important;
+  }
+}
+
+@media (max-width: 800px) {
+  .navbar-items {
+    display: none;
+  }
+}
+
+@media (max-width: 800px) {
+  .Sidebar-type {
+    display: none !important;
+  }
+}
+
+@media (max-width: 800px) {
+  .logo-move-up {
+    margin-right: 10rem;
+  }
+}
+
+
+
 /* Should be for color of the second row */
 .text-sm.text-secondary {
   --tw-text-opacity: 1;
@@ -188,6 +244,27 @@ margin-bottom: 1.3rem;
 .place-items-end {
   place-items: end;
 }
+
+@media (max-width: 800px) {
+  .place-items-end {
+    margin-left: 15rem;
+    margin-top: -2.3rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .navbar-toggler {
+    margin-top: -2.3rem;
+    border:#e4e4e4;
+  }
+}
+
+@media (max-width: 800px) {
+  .mdi-icon {
+    margin-right: 4rem;
+  }
+}
+
 @media (min-width: 768px) {
   .md\:flex {
     display: flex;
@@ -293,11 +370,6 @@ margin-bottom: 1.3rem;
 
 .items-center {
   align-items: center;
-}
-
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
 }
 
 .font-bold {
@@ -414,6 +486,14 @@ b { /* used for event dates/times */
   flex-grow: 1;
   padding: 3em;
 }
+
+@media (max-width: 800px) {
+  .demo-app-main {
+    padding: 1px;
+  }
+}
+
+
 
 .fc { /* the calendar root */
   max-width: 1100px;

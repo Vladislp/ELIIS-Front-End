@@ -8,7 +8,7 @@ const Personal = () => {
         <span className="font-semibold">Eliis Õpetaja</span>
         <span className="text-sm text-secondary">ELIIS Lasteaed</span>
       </div>
-      <div className="rounded-full p-2 military-color text-2xl flex">
+      <div className="rounded-full p-2 military-color profile-logo text-2xl flex">
         <svg
           className="mdi-icon e3-img-overlay"
           width="24"

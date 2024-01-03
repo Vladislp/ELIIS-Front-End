@@ -6,7 +6,7 @@ import Col from 'react-bootstrap/Col';
 import '../../../App.css';
 
 const IconButton = ({ to, path, badge, label, className }) => (
-  <NavLink to={to} className={`mx-2 position-relative ${className}`} aria-label={label}>
+  <NavLink to={to} className={`navbar-items mx-2 position-relative ${className}`} aria-label={label}>
     <div style={{ width: '2.7rem', height: '2.7rem', borderRadius: '50%', background: 'linear-gradient(#f79e80, #e58565)', display: 'flex', justifyContent: 'center', alignItems: 'center', marginRight: '0.125rem' }}>
       <Icon path={path} size={1.5} color="white" />
     </div>

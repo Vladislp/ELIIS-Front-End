@@ -17,7 +17,7 @@ const typeMenu = [
 
 const EventCalendarHeader = () => {
   return (
-    <div className="flex flex-col gap-2">
+    <div className="Sidebar-type flex flex-col gap-2">
       <h1 className='text-3xl'>Event Calendar</h1>
       <h3>Types</h3>
       {typeMenu.map((item, index) => (
