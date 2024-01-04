@@ -250,6 +250,7 @@ export default function DemoApp() {
           selectable={true}
           selectMirror={true}
           dayMaxEvents={true}
+          firstDay={1}
           height={'auto'}
           weekends={weekendsVisible}
           initialEvents={INITIAL_EVENTS}
